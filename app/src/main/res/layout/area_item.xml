@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal" android:layout_width="match_parent"
+    android:id="@+id/v_root"
+    android:layout_height="wrap_content"
+    android:translationZ="10dp"
+    android:elevation="15dp"
+    android:padding="15dp"
+    android:background="@drawable/rounded_shadow_view"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+>
+
+        <ImageView
+            android:layout_width="350px"
+            android:layout_height="350px"
+            android:src="@mipmap/item_area">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Khoa Kinh Tế"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:background="@drawable/rounded_text_view"
+                android:textSize="15dp"
+                android:textFontWeight="25"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_text_view"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="10dp"
+                    android:text="Quận Hoàng Mai"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="2dp"/>
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="9dp"
+                    android:text="Khoa nằm ở 193 Vĩnh Hưng, Chúng tôi gợi ý cho bạn nhà trọ xung quanh bán kính 5km, các địa điểm vui chơi giải trí xung quanh"
+                    android:drawableLeft="@drawable/radar"
+                    android:drawablePadding="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</LinearLayout>
+
