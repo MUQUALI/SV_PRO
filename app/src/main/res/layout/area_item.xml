@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:orientation="horizontal" android:layout_width="match_parent"
     android:id="@+id/v_root"
-    android:layout_height="wrap_content"
+    android:layout_height="180dp"
     android:translationZ="10dp"
     android:elevation="15dp"
     android:padding="15dp"
@@ -14,6 +14,7 @@ android:orientation="horizontal" android:layout_width="match_parent"
         <ImageView
             android:layout_width="350px"
             android:layout_height="350px"
+            android:layout_gravity="center"
             android:src="@mipmap/item_area">
 
         </ImageView>

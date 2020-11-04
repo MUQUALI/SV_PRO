@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorItemArea">#E4AD5B</color>
     <color name="colorItemAreaText">#F09714</color>
+    <color name="colorItemMenu">#E79A27</color>
+    <color name="colorSpinner">#D2EFF0</color>
+    <color name="colorDark">#E883EC</color>
 </resources>

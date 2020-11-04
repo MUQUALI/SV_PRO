@@ -7,4 +7,21 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="sp_faculty">
+        <item>Bạn cho thuê gần khoa nào ?</item>
+    </string-array>
+
+    <string-array name="sp_district">
+        <item>Quận Hoàng Mai</item>
+        <item>Quận Thanh Xuân</item>
+        <item>Quận Đống Đa</item>
+        <item>Quận Cầu Giấy</item>
+        <item>Quận Hoàn Kiếm</item>
+        <item>Quận Hai Bà Trưng</item>
+        <item>Quận Long Biên</item>
+        <item>Quận Tây Hồ</item>
+        <item>Quận Hà Đông</item>
+        <item>Quận Nam Từ Liêm</item>
+        <item>Quận Bắc Từ Liêm</item>
+    </string-array>
 </resources>

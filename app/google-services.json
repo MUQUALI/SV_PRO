@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "907696482546",
+    "firebase_url": "https://sv-pro-api-7a165.firebaseio.com",
+    "project_id": "sv-pro-api-7a165",
+    "storage_bucket": "sv-pro-api-7a165.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907696482546:android:e0106d97a5bb5396d4886b",
+        "android_client_info": {
+          "package_name": "com.example.sv_pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907696482546-8ombd22unki4769vat83d99f9fas6eii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sv_pro",
+            "certificate_hash": "88ced529cd7ee553a12fcbd8cd376711e3d2d230"
+          }
+        },
+        {
+          "client_id": "907696482546-ata2mbsfo80233d7p02fe2emasa2sicl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7sN5yE4ghYQcEeurRMEFz5P8VLv1ETFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907696482546-ata2mbsfo80233d7p02fe2emasa2sicl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

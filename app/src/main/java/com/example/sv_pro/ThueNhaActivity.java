@@ -1,25 +1,26 @@
 package com.example.sv_pro;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.sv_pro.Fragment.HomeFragment;
 import com.example.sv_pro.Fragment.NotificationFragment;
-import com.example.sv_pro.Fragment.PostFragment;
+import com.example.sv_pro.Fragment.AddPostFragment;
+import com.example.sv_pro.personal.ManageRentPost;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 public class ThueNhaActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView navBottom;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,33 @@ public class ThueNhaActivity extends AppCompatActivity implements BottomNavigati
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case android.R.id.home:
+                finish();
+                break;
+            case R.id.my_post:
+                Intent i = new Intent(ThueNhaActivity.this, ManageRentPost.class);
+                startActivity(i);
+                break;
+        }
+        return true;
+    }
+
     void init() {
         navBottom = findViewById(R.id.nav_bottom);
+        toolbar = findViewById(R.id.toolbar_rent);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     void configNav() {
@@ -59,7 +85,7 @@ public class ThueNhaActivity extends AppCompatActivity implements BottomNavigati
                 displayFragment(new HomeFragment());
                 break;
             case R.id.navigation_post:
-                displayFragment(new PostFragment());
+                displayFragment(new AddPostFragment());
                 break;
             case R.id.navigation_notifications:
                 displayFragment(new NotificationFragment());

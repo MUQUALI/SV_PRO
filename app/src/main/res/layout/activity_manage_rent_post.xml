@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".personal.ManageRentPost">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_mpost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorDark"
+        android:title="Tìm Nhà Trọ"
+        app:titleMarginStart="40dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingHorizontal="5dp"
+        android:id="@+id/rv_manage_rpost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

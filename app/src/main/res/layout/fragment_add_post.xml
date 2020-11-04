@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:id="@+id/scr_view"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#302C2C">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Fragment.AddPostFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <Spinner
+            android:id="@+id/sp_faculty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_spinner"
+            android:padding="8dp"
+            android:entries="@array/sp_faculty"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            />
+
+        <Spinner
+            android:id="@+id/sp_district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_spinner"
+            android:padding="8dp"
+            android:entries="@array/sp_district"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edt_address"
+            android:layout_marginVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:hint="Địa chỉ ( ghi rõ số nhà, số đường )"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginHorizontal="10dp"/>
+
+        <EditText
+            android:id="@+id/edt_rent_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            android:inputType="text"
+            android:paddingVertical="10dp"
+            android:layout_marginVertical="5dp"
+            android:hint="Giá thuê / tháng"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <EditText
+            android:id="@+id/edt_electric_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginVertical="5dp"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:hint="Giá điện / số"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <EditText
+            android:id="@+id/edt_water_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_marginVertical="5dp"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:hint="Giá nước / số"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <RelativeLayout
+            android:id="@+id/list_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageSwitcher
+                android:id="@+id/images_is"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+
+                />
+
+            <Button
+                android:id="@+id/btn_pre"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_arrow"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/right_arrow"
+                />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_add_image"
+                android:layout_width="200dp"
+                android:layout_marginBottom="25dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:text="Thêm ảnh"/>
+
+            <Button
+                android:id="@+id/btn_remove_img"
+                android:layout_width="200dp"
+                android:layout_marginBottom="25dp"
+                android:layout_gravity="end"
+                android:layout_height="50dp"
+                android:text="Xóa Ảnh"/>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/edt_content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="10dp"
+            android:hint="Nội dung chính"
+            android:background="@drawable/rounded_edittext"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="25dp"
+            android:layout_height="50dp"
+            android:text="Đăng bài"/>
+
+    </LinearLayout>
+
+</ScrollView>

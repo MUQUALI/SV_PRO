@@ -62,4 +62,9 @@ public class faculty { // Dùng để hứng dữ liệu trả về từ API chu
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return faculty;
+    }
 }

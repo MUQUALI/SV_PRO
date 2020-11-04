@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_home"
+    tools:ignore="UnusedNavigation">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -13,9 +14,9 @@
 
     <fragment
         android:id="@+id/navigation_post"
-        android:name="com.example.sv_pro.Fragment.PostFragment"
+        android:name="com.example.sv_pro.Fragment.AddPostFragment"
         android:label="@string/title_post"
-        tools:layout="@layout/fragment_post" />
+        tools:layout="@layout/fragment_add_post" />
 
     <fragment
         android:id="@+id/navigation_notifications"
