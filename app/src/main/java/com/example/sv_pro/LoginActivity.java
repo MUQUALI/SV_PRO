@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtPassword;
     FirebaseFirestore db;
     SharedPreferences sharedPreferences;
-    Button btnLogin;
+    Button btnLogin, btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +38,21 @@ public class LoginActivity extends AppCompatActivity {
                login();
             }
         });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     void init() {
         edtEmail = findViewById(R.id.edt_email);
         edtPassword = findViewById(R.id.edt_password);
         btnLogin = findViewById(R.id.btn_sign);
+        btnRegister = findViewById(R.id.btn_register);
         db = FirebaseFirestore.getInstance();
     }
 
@@ -65,11 +74,13 @@ public class LoginActivity extends AppCompatActivity {
                         public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                             try {
                                 String pwd = queryDocumentSnapshots.getDocuments().get(0).get("password").toString();
+                                String type = queryDocumentSnapshots.getDocuments().get(0).get("type").toString();
                                 if(password.equals(pwd)) {
                                     dialog.dismiss();
                                     sharedPreferences = getSharedPreferences("loginInfo", MODE_PRIVATE);
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                     editor.putString("email", email);
+                                    editor.putString("type", type);
                                     editor.apply();
                                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(i);

@@ -2,6 +2,7 @@ package com.example.sv_pro.Network;
 
 import com.example.sv_pro.Model.faculty;
 import com.example.sv_pro.Model.mRentPost;
+import com.example.sv_pro.Model.post;
 
 import java.util.ArrayList;
 
@@ -17,4 +18,7 @@ public interface ServiceAPI { // Khai báo các đường dẫn api lấy dữ l
 
     @GET("mypost")
     Call<ArrayList<mRentPost>> getMyRentPost(@Query("email") String email);
+
+    @GET("post")
+    Call<ArrayList<post>> getListPost(@Query("fid") String fid);
 }

@@ -30,7 +30,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout homeItem;
+    LinearLayout homeItem, learnItem;
     Toolbar toolbar;
     SharedPreferences sharedPreferences;
 
@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
     void init() {
         homeItem = findViewById(R.id.home_menu);
+        learnItem = findViewById(R.id.learn_menu);
+
         toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
     }
@@ -74,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ThueNhaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        learnItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HocTapActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,6 +1,7 @@
 package com.example.sv_pro;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -62,6 +63,12 @@ public class ThueNhaActivity extends AppCompatActivity implements BottomNavigati
 
     void configNav() {
         navBottom.setOnNavigationItemSelectedListener(this);
+        // check rule
+        SharedPreferences sharedPreferences = getSharedPreferences("loginInfo", MODE_PRIVATE);
+        String type = sharedPreferences.getString("type", "");
+        if(type.equals("sinh-vien")) {
+            navBottom.getMenu().findItem(R.id.navigation_post).setVisible(false);
+        }
         displayFragment(new HomeFragment());
         navBottom.setSelectedItemId(R.id.navigation_home);
     }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/forum_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_forum_item"
+    android:translationZ="10dp"
+    android:elevation="15dp"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hoannc@gmail.com đã đăng vào lúc 10h30p"
+        android:textSize="15dp" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_forum"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tv_author"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/vp_forum"
+        android:text="this is content"
+        android:textSize="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/forum_status"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_below="@+id/tv_content">
+
+        <ImageView
+            android:id="@+id/img_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_comment_black_15dp"/>
+
+        <TextView
+            android:id="@+id/tv_count_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="10"
+            android:layout_marginLeft="18dp"
+            android:layout_alignLeft="@+id/img_count"/>
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bình Luận"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_forum_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forum_status"/>
+
+
+    <RelativeLayout
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rv_forum_comment">
+
+        <EditText
+            android:id="@+id/edt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="bình luận"
+            android:background="@drawable/rounded_edittext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <ImageView
+            android:id="@+id/send_comment"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_send_black_20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

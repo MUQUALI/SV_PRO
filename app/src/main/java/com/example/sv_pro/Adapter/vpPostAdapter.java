@@ -12,13 +12,14 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class mPostImgAdapter extends PagerAdapter {
+public class vpPostAdapter extends PagerAdapter {
+    // class này để hiển thị ảnh trong bài viết
     private Context mContext;
     private ArrayList<String> dataImages;
 
-    public mPostImgAdapter(Context context, ArrayList<String> imageUrl) {
-        mContext = context;
-        dataImages = imageUrl;
+    public vpPostAdapter(Context mContext, ArrayList<String> dataImages) {
+        this.mContext = mContext;
+        this.dataImages = dataImages;
     }
 
     @Override
@@ -38,6 +39,7 @@ public class mPostImgAdapter extends PagerAdapter {
         item.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Picasso.get().load(dataImages.get(position)).into(item);
         container.addView(item, 0);
+
         return item;
     }
 

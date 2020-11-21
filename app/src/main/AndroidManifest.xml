@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".personal.ManageRentPost"></activity>
+        <activity android:name=".personal.NotificationForumActivity"></activity>
+        <activity android:name=".HocTapActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".personal.ManageRentPost" />
+        <activity android:name=".personal.ViewPostActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,14 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity
             android:name=".ThueNhaActivity"
             android:label="@string/title_activity_thue_nha" />
         <activity android:name=".MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_add_image_forum"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add_image"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:text="Thêm ảnh"/>
+
+        <Button
+            android:id="@+id/btn_remove_img"
+            android:layout_width="200dp"
+            android:layout_gravity="end"
+            android:layout_height="50dp"
+            android:text="Xóa Ảnh"/>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edt_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"
+        android:hint="Nội dung chính"
+        android:background="@drawable/rounded_edittext"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="25dp"
+        android:layout_height="50dp"
+        android:text="Đăng bài"/>
+
+</LinearLayout>

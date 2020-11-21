@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/v_root_post"
+    android:layout_height="wrap_content"
+    android:translationZ="10dp"
+    android:elevation="15dp"
+    android:padding="15dp"
+    android:backgroundTint="@color/colorItemArea"
+    android:background="@drawable/rounded_shadow_view"
+
+    android:layout_marginVertical="5dp">
+    <TextView
+        android:id="@+id/txt_faculty"
+        android:text="Cho thuê nhà gần khoa cntt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_shadow_view"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:text="phuong đã đăng lúc: 10h30p"
+            android:textColor="#fff" />
+
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:text="Địa chỉ: 103 Vĩnh Hưng- Hoàng Mai"
+            android:textColor="#fff" />
+
+
+        <TextView
+            android:id="@+id/tv_rent_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:text="Gía phòng:3.200.000"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_electric_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:text="Tiền điện:3.000/số"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_water_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:text="Tiền nước:70.000/người/tháng"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="10dp"
+            android:text="Cho thuê nhà khu vực Hoàng Mai"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_fpost"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+</LinearLayout>

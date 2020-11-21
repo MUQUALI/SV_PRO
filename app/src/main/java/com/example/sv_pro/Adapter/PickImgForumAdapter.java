@@ -1,24 +1,24 @@
 package com.example.sv_pro.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
-
-import com.squareup.picasso.Picasso;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
-public class mPostImgAdapter extends PagerAdapter {
+public class PickImgForumAdapter extends PagerAdapter {
     private Context mContext;
-    private ArrayList<String> dataImages;
+    private ArrayList<Uri> dataImages;
 
-    public mPostImgAdapter(Context context, ArrayList<String> imageUrl) {
-        mContext = context;
-        dataImages = imageUrl;
+    public PickImgForumAdapter(Context mContext, ArrayList<Uri> dataImages) {
+        this.mContext = mContext;
+        this.dataImages = dataImages;
     }
 
     @Override
@@ -36,7 +36,7 @@ public class mPostImgAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageView item = new ImageView(mContext);
         item.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        Picasso.get().load(dataImages.get(position)).into(item);
+        item.setImageURI(dataImages.get(position));
         container.addView(item, 0);
         return item;
     }
@@ -45,4 +45,5 @@ public class mPostImgAdapter extends PagerAdapter {
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((ImageView) object);
     }
+
 }

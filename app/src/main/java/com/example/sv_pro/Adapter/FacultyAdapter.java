@@ -1,6 +1,8 @@
 package com.example.sv_pro.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sv_pro.Model.faculty;
 import com.example.sv_pro.R;
+import com.example.sv_pro.personal.ViewPostActivity;
 
 import java.util.ArrayList;
 
@@ -54,6 +57,21 @@ public class FacultyAdapter extends RecyclerView.Adapter<FacultyAdapter.FacultyV
         holder.tvFaculty.setText(item.getFaculty());
         holder.tvAddress.setText(item.getAddress() +" "+ item.getDistrict());
         holder.tvDescription.setText(item.getDescription());
+
+        holder.vRoot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Activity myActivity = (Activity) context;
+                    Intent i = new Intent(myActivity, ViewPostActivity.class);
+                    i.putExtra("fid", item.getId());
+                    myActivity.startActivity(i);
+                }
+                catch (Exception e) {
+                    String err = e.getMessage();
+                }
+            }
+        });
     }
 
     @Override
